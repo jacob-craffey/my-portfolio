@@ -22,11 +22,10 @@ export const Project = (projectProps: ProjectProps) => {
         showSkeleton
       />
       <Card.Footer
-        isBlurred
         css={{
           position: "absolute",
-          bgBlur: "#00000066",
-          borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
+          bgColor: "rgba(0, 0, 0, 0.75)",
+          borderTop: "$borderWeights$light solid $gray800",
           bottom: 0,
           zIndex: 1,
         }}

@@ -5,8 +5,7 @@ export const Intro = () => (
     css={{
       mw: "700px",
       p: "$10",
-      bg: "transparent",
-      bf: "blur(10px) saturate(1.8) brightness(0.4)",
+      bg: "#101010",
     }}
   >
     <Card.Header>

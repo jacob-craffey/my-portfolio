@@ -9,8 +9,8 @@ interface ProjectProps {
 
 export const Project = (projectProps: ProjectProps) => {
   const { project } = projectProps;
-  const [visible, setVisible] = useState(false);
 
+  const [visible, setVisible] = useState(false);
   return (
     <Card isPressable isHoverable onClick={() => setVisible(true)}>
       <Card.Image
@@ -22,10 +22,11 @@ export const Project = (projectProps: ProjectProps) => {
         showSkeleton
       />
       <Card.Footer
+        isBlurred
         css={{
           position: "absolute",
-          bgColor: "rgba(0, 0, 0, 0.75)",
-          borderTop: "$borderWeights$light solid $gray800",
+          bgBlur: "#00000066",
+          borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
           bottom: 0,
           zIndex: 1,
         }}

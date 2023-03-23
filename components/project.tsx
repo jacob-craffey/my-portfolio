@@ -1,28 +1,24 @@
-import { Card, Text } from "@nextui-org/react";
+import { Card, Col, Modal, Text } from "@nextui-org/react";
+import { useState } from "react";
+import { ProjectModal } from "./project-modal";
+import Project from "@/models/project";
 
 interface ProjectProps {
-  name: string;
-  description: string;
-  imageSrc: string;
+  project: Project;
 }
 
-export const Project = (project: ProjectProps) => {
+export const Project = (projectProps: ProjectProps) => {
+  const { project } = projectProps;
+  const [visible, setVisible] = useState(false);
+
   return (
-    <Card
-      isPressable
-      isHoverable
-      css={{ height: 300, alignContent: "stretch" }}
-    >
+    <Card isPressable isHoverable onClick={() => setVisible(true)}>
       <Card.Image
         src={project.imageSrc}
         objectFit="contain"
         alt="Card image background"
         width="100%"
         height="100%"
-        css={{
-          alignContent: "stretch",
-          alignItems: "stretch",
-        }}
         showSkeleton
       />
       <Card.Footer
@@ -32,7 +28,6 @@ export const Project = (project: ProjectProps) => {
           bgBlur: "#00000066",
           borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
           bottom: 0,
-
           zIndex: 1,
         }}
       >
@@ -52,6 +47,11 @@ export const Project = (project: ProjectProps) => {
           {project.name}
         </Text>
       </Card.Footer>
+      <ProjectModal
+        isOpen={visible}
+        closeHandler={() => setVisible(false)}
+        project={project}
+      />
     </Card>
   );
 };

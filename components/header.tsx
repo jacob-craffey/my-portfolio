@@ -7,6 +7,7 @@ export default function Header() {
     "Experience",
     "Technologies",
     "Other Projects",
+    "Resume",
     "Contact",
   ];
 

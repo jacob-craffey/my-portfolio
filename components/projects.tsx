@@ -22,7 +22,7 @@ export const Projects = () => {
         </Text>
       </Card.Header>
 
-      <Grid.Container gap={5} css={{ justifyContent: "center" }}>
+      <Grid.Container gap={2} css={{ justifyContent: "center" }}>
         {projectsData.map((project, index) => (
           <Grid xs={15} sm={5} md={5} key={index}>
             <Project project={project} />

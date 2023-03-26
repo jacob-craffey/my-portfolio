@@ -30,6 +30,8 @@ export const ProjectModal = (projectModalProps: ProjectModalProps) => {
       <Modal.Body>
         <Text h3>Overview</Text>
         <Text>{projectModalProps.project.description.overview}</Text>
+        <Text h3>Solution</Text>
+        <Text>{projectModalProps.project.description.solution}</Text>
       </Modal.Body>
       <Modal.Footer></Modal.Footer>
     </Modal>

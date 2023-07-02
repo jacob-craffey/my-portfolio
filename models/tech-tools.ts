@@ -7,6 +7,6 @@ export enum Tech {
   Azure = "https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg",
   React = "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
   Node = "https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png",
-  Ampify = "https://seeklogo.com/images/A/aws-amplify-logo-D68DDB5AB1-seeklogo.com.png",
+  Amplify = "https://seeklogo.com/images/A/aws-amplify-logo-D68DDB5AB1-seeklogo.com.png",
   Serverless = "https://www.svgrepo.com/show/374073/serverless.svg",
 }

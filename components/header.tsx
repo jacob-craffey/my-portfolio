@@ -1,14 +1,19 @@
-import { Navbar, Link, Text } from "@nextui-org/react";
+import { Navbar, Text } from "@nextui-org/react";
 import { Layout } from "./layout";
+import { Link } from "react-scroll";
 
 export default function Header() {
-  const collapseItems = [
-    "About",
-    "Experience",
-    "Technologies",
-    "Other Projects",
-    "Resume",
-    "Contact",
+  interface HeaderItems {
+    title: string;
+    id: string;
+  }
+  const collapseItems: HeaderItems[] = [
+    { title: "About", id: "about" },
+    { title: "Experience", id: "experience" },
+    { title: "Technologies", id: "technologies" },
+    { title: "Other Projects", id: "otherProjects" },
+    { title: "Resume", id: "resume" },
+    { title: "Contact", id: "contact" },
   ];
 
   return (
@@ -22,17 +27,17 @@ export default function Header() {
         </Navbar.Brand>
         <Navbar.Content hideIn="xs">
           {collapseItems.map((item, index) => (
-            <Navbar.Link key={index} href="#">
-              {item}
-            </Navbar.Link>
+            <Link to={item.id} smooth="easeInCubic" duration={300} key={index} offset={-150}>
+              {item.title}
+            </Link>
           ))}
         </Navbar.Content>
         <Navbar.Content></Navbar.Content>
         <Navbar.Collapse>
           {collapseItems.map((item, index) => (
             <Navbar.CollapseItem key={index}>
-              <Link color="inherit" href="#">
-                {item}
+              <Link to={item.id} smooth={true} duration={200} key={index}>
+                {item.title}
               </Link>
             </Navbar.CollapseItem>
           ))}

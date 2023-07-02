@@ -1,8 +1,8 @@
-import { Text, Card } from "@nextui-org/react";
 import { Box } from "./box";
 import { Intro } from "./intro";
 import { Projects } from "./projects";
 import { Screen } from "./screen";
+import { Technologies } from "./technologies";
 
 export const Content = () => (
   <Box
@@ -16,6 +16,9 @@ export const Content = () => (
     </Screen>
     <Screen>
       <Projects />
+    </Screen>
+    <Screen>
+      <Technologies />
     </Screen>
   </Box>
 );

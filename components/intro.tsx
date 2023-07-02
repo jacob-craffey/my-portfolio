@@ -7,6 +7,7 @@ export const Intro = () => (
       p: "$10",
       bg: "#101010",
     }}
+    id="about"
   >
     <Card.Header>
       <Text

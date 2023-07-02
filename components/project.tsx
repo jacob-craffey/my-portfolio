@@ -12,13 +12,11 @@ export const Project = (projectProps: ProjectProps) => {
 
   const [visible, setVisible] = useState(false);
   return (
-    <Card isPressable isHoverable onClick={() => setVisible(true)}>
+    <Card isPressable isHoverable onClick={() => setVisible(true)} >
       <Card.Image
         src={project.imageSrc}
-        objectFit="contain"
+        objectFit="cover"
         alt="Card image background"
-        width="100%"
-        height="100%"
         showSkeleton
       />
       <Card.Footer
